@@ -27,7 +27,8 @@ RUN apt-get update && apt-get install -y \
                    bcmath \
                    opcache \
         && pecl install memcached-2.2.0 \
-        && docker-php-ext-enable memcached 
-#        && a2enmod rewrite && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
+        && docker-php-ext-enable memcached \
+        && a2enmod rewrite
+#         && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
 COPY php.ini /usr/local/etc/php/
 EXPOSE 80
