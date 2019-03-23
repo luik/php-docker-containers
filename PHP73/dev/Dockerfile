@@ -30,7 +30,8 @@ RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xd
                 && echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
                 && echo "xdebug.max_nesting_level=1000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
                 && echo "xdebug.remote_host=172.17.0.1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-                && chmod 666 /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-#        && a2enmod rewrite && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
+                && chmod 666 /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
+                && a2enmod rewrite
+#         && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
 COPY php.ini /usr/local/etc/php/php.ini
 EXPOSE 80
