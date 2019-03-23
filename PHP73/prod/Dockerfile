@@ -26,6 +26,6 @@ RUN apt-get update && apt-get install -y \
                    zip \
                 && pecl install redis && docker-php-ext-enable redis \
                 && a2enmod rewrite
-#        && a2enmod rewrite && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
+#        && mkdir /var/www/moodledata && chown www-data:www-data /var/www/moodledata
 COPY php.ini /usr/local/etc/php/php.ini
 EXPOSE 80
