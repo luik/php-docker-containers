@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
                    bcmath \
                    opcache \
                    xmlrpc \
-                && pecl install redis && docker-php-ext-enable redis \
+                && pecl install redis-4.3.0 && docker-php-ext-enable redis \
                 && pecl install xdebug-2.5.5 && docker-php-ext-enable xdebug
 RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
                 && echo "xdebug.remote_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
