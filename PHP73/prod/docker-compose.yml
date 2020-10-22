@@ -18,6 +18,7 @@ services:
       - 91:80
     volumes:
       - ./code:/var/www/html
+      - ./php.ini:/usr/local/etc/php/php.ini
     restart: always
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
